@@ -28,8 +28,8 @@ class CategoryAdmin(admin.ModelAdmin):
 
 # Juego
 class GameAdmin(admin.ModelAdmin):
-    list_display = ('title', 'released_date', 'published_date', 'status')
-    exclude = ('author','slug', 'vote_fav', 'vote_util', 'vote_tmbup', 'vote_tmbdn')
+    list_display = ('title', 'slug', 'released_date', 'published_date', 'status')
+    exclude = ('slug', 'vote_fav', 'vote_util', 'vote_tmbup', 'vote_tmbdn')
     summernote_fields = ('post_body')
     list_filter = ('author', 'status')
     search_fields = ['title', 'subtitle'] #author name has the double underscore bc is a foreign key
